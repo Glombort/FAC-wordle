@@ -17,13 +17,13 @@ function wordleFunc() {
                 id = id.slice(0, -1) + String((index+1))
                 if (element === answer[index]) {
                     document.getElementById(id).innerHTML = element;
-                    document.getElementById(id).style.backgroundColor = 'green';
+                    document.getElementById(id).style.backgroundColor = '#538d4e';
                 } else if (answer.includes(element)) {
                     document.getElementById(id).innerHTML = element;
-                    document.getElementById(id).style.backgroundColor = 'orange';
+                    document.getElementById(id).style.backgroundColor = '#b59f3b';
                 } else {
                     document.getElementById(id).innerHTML = element;
-                    document.getElementById(id).style.backgroundColor = 'grey';
+                    document.getElementById(id).style.backgroundColor = '#3A3B3C';
                 }
             })
         }
