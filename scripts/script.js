@@ -13,8 +13,6 @@ function wordleFunc() {
         if (count>=7) {
             window.alert('Too many guesses')
         } else { 
-
-            
             var id = 'r' + String(count) + '-l0';
             var answer = ['W','O','R','L','D'];
             //Checks letter by letter for correct placement
