@@ -1,4 +1,6 @@
 var count = 0;
+var wordList = ['WORLD','TRADE','SLOTH','GREAT','BARGE','SURGE','STORE','GHOST','CLEANS','JOUST']
+var answerFull = wordList[Math.floor(Math.random()*wordList.length)];
 document.getElementById("word-btn").onclick = function() {wordleFunc()};
 function wordleFunc() {
     var wordInput = document.getElementById('word-input').value.toUpperCase();
@@ -14,7 +16,7 @@ function wordleFunc() {
             window.alert('Too many guesses')
         } else { 
             var id = 'r' + String(count) + '-l0';
-            var answer = ['W','O','R','L','D'];
+            answer = [...answerFull];
             //Checks letter by letter for correct placement
             [...wordInput].forEach((element,index) => {
                 //Gets correct element id for each letter tile
@@ -34,7 +36,7 @@ function wordleFunc() {
                 }
             })
             //Alerts if correct word guessed
-            if (wordInput === 'WORLD') {
+            if (wordInput === answerFull) {
                 window.alert('Congratulations you got the word')
             }
         }
