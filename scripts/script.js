@@ -31,6 +31,8 @@ function wordleFunc() {
             }
         }
     }
+    var form = document.getElementById("submit-form");
+    form.reset();
 }
 
 function checkNum(str) {
@@ -42,3 +44,5 @@ function checkNum(str) {
   }
   return numbers < 0 ? [true] : [false,"You need at least two numbers"]
 }
+
+
