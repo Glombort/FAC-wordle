@@ -26,6 +26,9 @@ function wordleFunc() {
                     document.getElementById(id).style.backgroundColor = '#3A3B3C';
                 }
             })
+            if (wordInput === 'WORLD') {
+                window.alert('Congratulations you got the word')
+            }
         }
     }
 }
