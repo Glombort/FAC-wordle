@@ -1,0 +1,25 @@
+#game-grid {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+}
+
+.tile {
+    height: 2rem;
+    width: 2rem;
+    background-color: aqua;
+    margin-left: 1rem;
+    margin-top: 1rem;  
+}
+
