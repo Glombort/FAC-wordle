@@ -1,5 +1,6 @@
 # FAC-wordle
 Wordle for FAC week 3
+Based on the viral word game [Wordle](https://www.powerlanguage.co.uk/wordle/)
 ## User Stories
 - List of all 5 letter words
 - Input from user
@@ -11,3 +12,4 @@ Wordle for FAC week 3
 - Unused letters - unstyled
 - 6 guessing rows
 - Correct word after 6th attempt wrong
+
