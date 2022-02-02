@@ -1,7 +1,6 @@
 var count = 0;
 document.getElementById("word-btn").onclick = function() {wordleFunc()};
 function wordleFunc() {
-    var answer = ['w','o','r','l','d'];
     var wordInput = document.getElementById('word-input').value.toUpperCase();
     if (wordInput.length < 5) {
         window.alert('Word too short')
@@ -13,6 +12,7 @@ function wordleFunc() {
             window.alert('Too many guesses')
         } else { 
             var id = 'r' + String(count) + '-l0';
+            var answer = ['W','O','R','L','D'];
             [...wordInput].forEach((element,index) => {
                 id = id.slice(0, -1) + String((index+1))
                 if (element === answer[index]) {
