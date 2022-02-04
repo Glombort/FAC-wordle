@@ -1,25 +1,64 @@
-#game-grid {
+* {
+    background-color: #121213;
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+header {
+    margin: 0 auto;
+}
+.title {
     display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
+    color: #92aec0;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.game-grid {
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    width: 350px;
+    height: 420px;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 .row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
 }
 
 .tile {
-    height: 2rem;
-    width: 2rem;
-    background-color: aqua;
-    margin-left: 1rem;
-    margin-top: 1rem;  
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3a3a3c;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 2rem;
+    vertical-align: middle;
+    font-weight: bold ;
 }
 
+.input-area {
+    height: 210px;
+    margin: 0 auto;
+}
+
+
+.input-area > * {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem  auto;
+    align-items: center;
+    color: #92aec0;
+    font-size: 2rem;
+    text-align: center;
+}

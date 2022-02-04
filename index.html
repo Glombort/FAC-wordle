@@ -8,8 +8,9 @@
     <title>Wordle</title>
 </head>
 <body>
-    <main>
-        <div id="game-grid">
+    <main class="center">
+        <header><h1 class="title">GEORDLE</h1></header>
+        <div class="game-grid">
             <div class="row" id="row-one">
                 <div class="tile" id="r1-l1"></div>
                 <div class="tile" id="r1-l2"></div>
@@ -53,7 +54,7 @@
                 <div class="tile" id="r6-l5"></div>
             </div>
         </div>
-        <form id="submit-form" action='#'>
+        <form class="input-area" id="submit-form" action='#'>
             <label for="word-input">Input a 5 letter word</label>
             <input id="word-input" type="text"/>
             <button type="submit" id="word-btn">Enter Word</button>
