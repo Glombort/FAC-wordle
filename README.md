@@ -1,15 +1,13 @@
 # FAC-wordle
-Wordle for FAC week 3
-Based on the viral word game [Wordle](https://www.powerlanguage.co.uk/wordle/)
-## User Stories
-- List of all 5 letter words
-- Input from user
-- User can use keys to select letters
-- How to play guide
-- Correct letter correct placing - Green
-- Correct letter wrong placing - Orange
-- Wrong letter - Grey
-- Unused letters - unstyled
-- 6 guessing rows
-- Correct word after 6th attempt wrong
 
+Wordle feature takehome challenge
+
+Based on the viral word game [Wordle](https://www.powerlanguage.co.uk/wordle/)
+
+## User Stories focused on 
+- [x] Input from user checked against word with coloured feedback
+- [x] Allow for multiple attempts on the same page
+
+## Stretch Goals
+- [ ] Sequential transition of users answer being correct or not
+- [ ] If multiple of the same letter inputted but only one in solution, only one is coloured
