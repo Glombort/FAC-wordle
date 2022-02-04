@@ -1,40 +1,66 @@
-var count = 0;
-var wordList = ['WORLD','TRADE','SLOTH','GREAT','BARGE','SURGE','STORE','GHOST','CLEANS','JOUST']
-var answerFull = wordList[Math.floor(Math.random()*wordList.length)];
-document.getElementById("word-btn").onclick = function() {wordleFunc()};
+//Initialising number of button clicks
+let count = 0;
 
+let wordList = [
+    'WORLD',
+    'TRADE',
+    'SLOTH',
+    'GREAT',
+    'BARGE',
+    'SURGE',
+    'STORE',
+    'GHOST',
+    'CLEANS',
+    'JOUST'
+];
+
+//Gets random word from wordList
+let answerFull = wordList[Math.floor(Math.random()*wordList.length)];
+
+//Button Clicked
+document.getElementById("word-btn").onclick = function() {wordleFunc()};
 function wordleFunc() {
-    var wordInput = document.getElementById('word-input').value.toUpperCase();
-    // Check word length is correct
-    if (wordInput.length < 5) {
-        window.alert('Word too short')
-    } else if (wordInput.length > 5) {
-        window.alert('Word too long')
+    //Takes User input in wordInput and turns to all caps
+    let wordInput = document.getElementById('word-input').value.toUpperCase();
+    
+    //Check alpahabet A-Z or a-z is used
+    let validChars = /^[A-Za-z]+$/;
+    if (!wordInput.match(validChars)) {
+        alert('Only letters A-Z are allowed')
+    } else if (wordInput.length !== 5) {
+        //Check input length is exactly 5
+        inputLength(wordInput.length)
     } else {
+        //Increments number of guesses by 1
         count++;
         answerCheck(wordInput)
+        //Clears input box for next guess
+        let form = document.getElementById("submit-form");
+        form.reset();
     }
-    //Clears input box
-    var form = document.getElementById("submit-form");
-    form.reset();
 }
 
-function checkNum(str) {
-  let numbers = 0
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) {
-      numbers++
+
+/*
+Checking Functions
+*/
+
+//Alert of too short/long input
+function inputLength(length) {
+    if (length > 5) {
+        alert('Word too short')
+    } else {
+        alert('Word too long')
     }
-  }
-  return numbers < 0 ? [true] : [false,"You need at least two numbers"]
 }
 
+//Checks input against answer
 function answerCheck(input) {
     
     if (count>=7) {
         window.alert('Out of guesses refresh the page for a new word')
     } else { 
-        var id = 'r' + String(count) + '-l0';
+        let id = 'r' + String(count) + '-l0';
         answer = [...answerFull];
         //Checks letter by letter for correct placement
         [...input].forEach((element,index) => {
@@ -49,6 +75,11 @@ function answerCheck(input) {
         }
     }
 }
+
+
+/*
+Styling Functions
+*/
 
 function colorChanger(id, element, index) {
     if (element === answer[index]) {
