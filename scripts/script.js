@@ -48,9 +48,9 @@ Checking Functions
 //Alert of too short/long input
 function inputLength(length) {
     if (length > 5) {
-        alert('Word too short')
-    } else {
         alert('Word too long')
+    } else {
+        alert('Word too short')
     }
 }
 
