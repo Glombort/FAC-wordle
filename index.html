@@ -56,7 +56,7 @@
         </div>
         <form class="input-area" id="submit-form" action='#'>
             <label for="word-input">Input a 5 letter word</label>
-            <input id="word-input" type="text"/>
+            <input id="word-input" type="text" oninput="this.value = this.value.toUpperCase()"/>
             <button type="submit" id="word-btn">Enter Word</button>
         </form>
     </main>
