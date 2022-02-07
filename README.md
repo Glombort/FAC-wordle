@@ -9,6 +9,8 @@ Based on the viral word game [Wordle](https://www.powerlanguage.co.uk/wordle/)
 
 :white_check_mark: Allow for multiple attempts on the same page
 
+I chose these user stories as I felt they were an interesting thought to how to accomplish it, whilst also being the user story to achieve a game that is fully playable.
+
 ## Stretch Goals
 :white_large_square: Sequential transition of users answer being correct or not
 
